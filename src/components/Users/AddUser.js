@@ -35,7 +35,7 @@ const AddUser = (props) => {
         <div className="subtitle">Let's create your account!</div>
         <div className="input-container ic1">
           <input
-            id={Math.random().toString()}
+            id="username"
             className="input"
             type="text"
             placeholder=" "
@@ -50,7 +50,7 @@ const AddUser = (props) => {
         <div className="input-container ic2">
           
           <input
-            id="age"  
+            id="age"
             className="input"
             type="number"
             placeholder=" "
