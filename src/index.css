@@ -7,5 +7,7 @@ html {
 }
 
 body {
+  padding-top: 300px;
   margin: 0;
+  padding-bottom: 1200px;
 }

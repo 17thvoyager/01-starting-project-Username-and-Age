@@ -20,10 +20,11 @@ const AddUser = (props) => {
     if(enteredUsername.trim().length === 0 || enteredAge === 0){
       return;
     }
-    if(enteredAge < -1 ){
+    if(enteredAge < 1 ){
       return console.log("You are not qualified");
     }
-    console.log(enteredUsername, enteredAge);
+
+    props.onAddUser(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };
@@ -31,11 +32,10 @@ const AddUser = (props) => {
   return (
     <Card>
       <form onSubmit={addUserHandler}>
-        <div className="title">Welcome</div>
         <div className="subtitle">Let's create your account!</div>
         <div className="input-container ic1">
           <input
-            id="username"
+            id={Math.random().toString()}
             className="input"
             type="text"
             placeholder=" "
@@ -50,7 +50,7 @@ const AddUser = (props) => {
         <div className="input-container ic2">
           
           <input
-            id="age"
+            id="age"  
             className="input"
             type="number"
             placeholder=" "
