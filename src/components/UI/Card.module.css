@@ -8,3 +8,9 @@
     width: 520px;
     color: white;
   }
+
+  .some {
+    border-width: 2px;
+    border-color: blue;
+
+  }

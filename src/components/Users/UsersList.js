@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../UI/Card.js';
-//import classes from '../UI/Card.module.css';
+import classes from '../UI/Card.module.css';
 
 
 const UsersList = props => {
@@ -8,9 +8,11 @@ const UsersList = props => {
       <Card >  
         <ul>
           {props.user.map((user) => (
-            <li>
+            <div className={classes.some}>
+            <li key={user.id }>
               {user.name} {user.age}
             </li>
+            </div>
           ))}
         </ul>
       </Card>
